@@ -1,0 +1,84 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div class="centered", id="column-details">
+            <div class="row">
+              <label for="Graph Type">Graph Shape:</label>
+
+              <select id="graphSelect">
+                <option value="Sinusoid">Sinusoid</option>
+                <option value="Linear">Linear</option>
+              </select>
+
+              <div class="col-6" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Samples">Samples:</label>
+                <input type="text", name="textX", value="{{sampleCount}}" id="samples-text" size="15">
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="card chart-container">
+                <canvas id="chart" width="1000" height="800"></canvas>
+              </div>
+            </div>
+        
+            <div class="GraphInputFields">
+              <div class="row">
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <label for="Amplitude">Amplitude:</label>
+                </div>
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <input type="text", name="textX", value="{{amplitude}}" id="amplitude-text" size="5">
+                </div>
+                <div class="col-10">
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="{{amp_slider}}" class="slider" id="amplitude-slider">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <label for="Frequency">Frequency:</label>
+                </div>
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <input type="text", name="textX", value="{{frequency}}" id="frequency-text" size="5">
+                </div>
+                <div class="col-10">
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="{{freq_slider}}" class="slider" id="frequency-slider">
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <div class="row">
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Offset">Offset:</label>
+              </div>
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <input type="text", name="textX", value="{{offset}}" id="offset-text" size="5">
+              </div>
+              <div class="col-10">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="{{offset_slider}}" class="slider" id="offset-slider">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Noise">Noise:</label>
+              </div>
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <input type="text", name="textX", value="{{noise}}" id="noise-text" size="5">
+              </div>
+              <div class="col-10">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="{{noise_slider}}" class="slider" id="noise-slider">
+                </div>
+              </div>
+            </div>
+        </div>
+    </body>
+</html>

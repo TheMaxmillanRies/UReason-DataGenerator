@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="../static/style.css">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="shortcut icon" href="#">
+    </head>
+    <body>
+        <div class="split left">
+          <button type="button" class="create-button", id="create-button"> Add Column </button>
+          <div class="centered">
+            <div class="container", id="table-container">
+              {% for key, value in dictionary.items() %}
+              <div class="row"> 
+                <div class="col-6" id="standard-row">
+                  <input type="text", name="{{key}}", value="{{value.name}}" class="change-text-label">
+                </div>
+                <div class="col-6" id="standard-row">
+                  <button type="button" class="btn btn-primary btn-sm buttonX" id="buttonX" name="{{key}}"> Edit </button>
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="split right" id="right-container">
+          <!-- <div class="centered", id="column-details">
+            <div class="row">
+              <label for="Graph Type">Graph Shape:</label>
+              <select name="graphSelect" id="graphSelect">
+                <option value="Sinusoid">Sinusoid</option>
+                <option value="Linear">Linear</option>
+              </select>
+              <div class="col-6" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Samples">Samples:</label>
+                <input type="text", name="textX", value="" id="samples-text" size="15">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="card chart-container">
+                <canvas id="chart" width="1000" height="800"></canvas>
+              </div>
+            </div>
+
+            <div class="GraphInputFields">
+              <div class="row">
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <label for="Amplitude">Amplitude:</label>
+                </div>
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <input type="text", name="textX", value="" id="amplitude-text" size="5">
+                </div>
+                <div class="col-10">
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="100" class="slider" id="amplitude-slider">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <label for="Frequency">Frequency:</label>
+                </div>
+                <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                  <input type="text", name="textX", value="" id="frequency-text" size="5">
+                </div>
+                <div class="col-10">
+                  <div class="slidecontainer">
+                    <input type="range" min="1" max="100" value="100" class="slider" id="frequency-slider">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Offset">Offset:</label>
+              </div>
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <input type="text", name="textX", value="" id="offset-text" size="5">
+              </div>
+              <div class="col-10">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="100" class="slider" id="offset-slider">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <label for="Noise">Noise:</label>
+              </div>
+              <div class="col-1" style="display:flex; flex-direction: row; justify-content: center; align-items: center">
+                <input type="text", name="textX", value="" id="noise-text" size="5">
+              </div>
+              <div class="col-10">
+                <div class="slidecontainer">
+                  <input type="range" min="1" max="100" value="100" class="slider" id="noise-slider">
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+    
+        {% block content %}{% endblock %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+        <script type="text/javascript" src="../static/main.js"></script>
+    </body>
+    
+</html>
